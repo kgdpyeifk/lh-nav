@@ -118,6 +118,11 @@
   </div>
 </template>
 
+
+import { getSiteConfig } from '@/config/site.js'
+
+// 获取网站配置
+const siteConfig = getSiteConfig()
 <script setup>
 import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
@@ -140,7 +145,7 @@ const saving = ref(false)
 // 管理界面状态
 const activeTab = ref('categories')
 const categories = ref([])
-const navTitle = ref('烈火') // 保存网站标题
+const navTitle = ref(siteConfig.siteName) // 保存网站标题
 const selectedCategoryId = ref('') // 用于站点管理的选中分类
 
 // 紧急兜底：如果5秒后loading还是true，强制重置
@@ -176,19 +181,17 @@ const handleLogin = async () => {
   loginError.value = ''
 
   try {
-    const adminPassword = import.meta.env.VITE_ADMIN_PASSWORD
-    if (!adminPassword) {
-      throw new Error('管理密钥未配置，请配置环境变量')
+    // 使用配置文件中的管理员密码
+    if (!siteConfig.adminPassword) {
+      throw new Error('管理密钥未配置,请配置环境变量 VITE_ADMIN_PASSWORD')
     }
 
-    if (loginPassword.value === adminPassword) {
+    if (loginPassword.value === siteConfig.adminPassword) {
       isAuthenticated.value = true
       localStorage.setItem('admin_authenticated', 'true')
 
-      // 登录成功后，不立即加载数据，让用户进入管理界面
-      console.log('登录成功，准备进入管理界面')
+      console.log('登录成功,准备进入管理界面')
 
-      // 延迟加载，避免阻塞登录流程
       setTimeout(async () => {
         try {
           await loadCategories()
@@ -198,12 +201,11 @@ const handleLogin = async () => {
         }
       }, 500)
     } else {
-      throw new Error('密钥错误，请重新输入')
+      throw new Error('密钥错误,请重新输入')
     }
   } catch (error) {
     loginError.value = error.message
   } finally {
-    // 确保登录流程的loading状态被重置
     if (!isAuthenticated.value) {
       loading.value = false
     }
