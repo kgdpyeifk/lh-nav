@@ -208,7 +208,7 @@
 
             <div class="footer-bottom">
               <p>&copy; {{ new Date().getFullYear() }} {{ displayTitle }} - 由 <a href="https://github.com/maodeyu180" target="_blank" rel="noopener noreferrer">maodeyu180</a> 用 ❤️ 制作</p>
-              <p class="footer-tech">基于 Vue.js 构建 | <a href="https://github.com/kgdpyeifk/lh-nav" target="_blank" rel="noopener noreferrer">查看源代码</a></p>
+              <p class="footer-tech">基于 Vue.js 构建 | <a href="https://github.com/maodeyu180/mao_nav" target="_blank" rel="noopener noreferrer">查看源代码</a></p>
             </div>
           </footer>
         </div>
@@ -248,7 +248,7 @@ const unlocking = ref(false) // 解锁中状态
 const unlockError = ref('') // 解锁错误信息
 
 // 顶部原作者项目地址变量
-const projectUrl = 'https://github.com/maodeyu180/mao_nav'
+const projectUrl = 'https://github.com/kgdpyeifk/lh-nav'
 
 // 计算显示的标题：优先使用环境变量，否则使用接口返回的标题，最后兜底
 const envSiteTitle = import.meta.env.VITE_SITE_TITLE
