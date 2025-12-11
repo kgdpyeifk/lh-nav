@@ -3,7 +3,7 @@ export const mockData = {
     {
       "id": "my-favorites",
       "name": "我的常用",
-      "icon": "💥",
+      "icon": "🌐",
       "order": 0,
       "sites": [
         {
@@ -488,7 +488,5 @@ export const mockData = {
       ]
     }
   ],
-  "title": "导航站-洁哥专属",
-  "_fileSha": "22cf9fa60f881ec125087f324eb8bc55f1c55130",
-  "search": "google"
+  "title": "导航站-洁哥专属"
 }
