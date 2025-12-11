@@ -451,7 +451,7 @@ const openGitHub = () => {
 // 组件挂载时获取数据
 onMounted(async () => {
   checkLockStatus() // 检查锁定状态
-  
+
   // 给Logo增加时间戳，强制刷新缓存
   // 这里的逻辑是：每次加载页面都尝试获取最新的 logo.png
   logoUrl.value = `/logo.png?t=${new Date().getTime()}`
@@ -616,6 +616,25 @@ onUnmounted(() => {
   padding: 20px 0;
   height: calc(100vh - 180px); /* 为底部留出空间 */
   overflow-y: auto;
+}
+
+/* 自定义滚动条样式 */
+.category-nav::-webkit-scrollbar {
+  width: 6px;
+}
+
+.category-nav::-webkit-scrollbar-track {
+  background: transparent; /* 背景透明，显示左侧边栏背景 */
+}
+
+.category-nav::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1); /* 默认半透明 */
+  border-radius: 3px;
+  transition: background 0.3s ease;
+}
+
+.category-nav::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3); /* 悬停时稍微明显一点 */
 }
 
 .nav-title {
