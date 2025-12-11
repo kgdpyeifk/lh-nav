@@ -440,6 +440,13 @@ export const mockData = {
           "url": "https://www.spaceship.com/zh/launchpad/",
           "description": "小姨子",
           "icon": "https://www.faviconextractor.com/favicon/www.spaceship.com"
+        },
+        {
+          "id": "site-1765415447376",
+          "name": "ZABC",
+          "url": "https://zoneabc.net/login",
+          "description": "免费域名",
+          "icon": "https://www.faviconextractor.com/favicon/zoneabc.net"
         }
       ]
     },
