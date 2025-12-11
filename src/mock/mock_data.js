@@ -26,6 +26,13 @@ export const mockData = {
           "url": "https://www.youtube.com",
           "description": "视频分享平台",
           "icon": "/sitelogo/www.youtube.com.ico"
+        },
+        {
+          "id": "site-1765415112900",
+          "name": "金蝶云",
+          "url": "http://clouddxt.tcl-lighting.com/k3cloud/html5/index.aspx",
+          "description": "金蝶云星空ERP",
+          "icon": "https://passport.kingdee.com/passport/favicon.ico"
         }
       ]
     },
