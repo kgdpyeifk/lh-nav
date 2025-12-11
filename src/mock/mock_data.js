@@ -3,7 +3,7 @@ export const mockData = {
     {
       "id": "my-favorites",
       "name": "我的常用",
-      "icon": "🌐",
+      "icon": "💻",
       "order": 0,
       "sites": [
         {
@@ -426,6 +426,20 @@ export const mockData = {
           "url": "https://www.bejson.com/",
           "description": "工具大全",
           "icon": "/sitelogo/www.bejson.com.ico"
+        },
+        {
+          "id": "site-1765415319337",
+          "name": "域名监控",
+          "url": "https://ym.tictok.dpdns.org",
+          "description": "",
+          "icon": "https://www.faviconextractor.com/favicon/ym.tictok.dpdns.org"
+        },
+        {
+          "id": "site-1765415405801",
+          "name": "5678",
+          "url": "https://www.spaceship.com/zh/launchpad/",
+          "description": "小姨子",
+          "icon": "https://www.faviconextractor.com/favicon/www.spaceship.com"
         }
       ]
     },
